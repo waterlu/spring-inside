@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car" class="cn.lu.spring.ioc.Car" scope="singleton" lazy-init="false">
+        <!--<constructor-arg ref="wheel" />-->
+        <property name="wheel" ref="wheel" />
+    </bean>
+
+    <!--<bean id="car" class="cn.lu.spring.ioc.Car" scope="singleton" />-->
+
+    <bean id="wheel" class="cn.lu.spring.ioc.Wheel"/>
+
+    <bean id="myApplicationAware" class="cn.lu.spring.ioc.MyApplicationAware" />
+
+</beans>

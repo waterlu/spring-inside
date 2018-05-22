@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Properties>
+    <Property name="log-path">/tmp/jvm_inside.log</Property>
+  </Properties>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT" follow="true">
+      <PatternLayout>
+        <charset>utf-8</charset>
+        <!--<pattern>%d %p %C{1.} [%t] %X %m%n</pattern>-->
+        <pattern>%d{HH:mm:ss:SSS} %p [%t] %m%n</pattern>
+      </PatternLayout>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="info" additivity="false">
+      <AppenderRef ref="Console" />
+    </Root>
+  </Loggers>
+</Configuration>
